@@ -1,0 +1,19 @@
+// BFS Algo
+    void BFS(int i, vector<int>& adj[], vector<int>& visited){
+    	queue<int> q;
+    	q.push(i);
+    	while(!q.empty()){
+			int size = q.size();
+        while(size--){
+          int x = q.front();
+            q.pop();
+            visited[x] = 1;
+            for(auto it : adj[x]){
+              if(!visited[it]) q.push(it);
+            }
+        }
+    	}
+    }
+    
+    
+ 
